@@ -1,0 +1,14 @@
+Somehow take weather data from some weather api.
+- https://eccc-msc.github.io/open-data/msc-datamart/readme_en/
+- https://api.weather.gc.ca
+
+Make some prediction about it?
+(technically, there are a bunch of people that already do this for a living but!)
+- Ours should use some form of long term learning for hourly weather updates?
+    - get hourly data
+    - predict next hourly data
+    - compare hourly data (predicted vs reported vs measured - if we attached some temperature/vision sensors).
+        -> actually using sensors requires our device to remain in the same place for an extended period of time...
+    - update next predictions
+
+Display this data fancily on some website frontend?

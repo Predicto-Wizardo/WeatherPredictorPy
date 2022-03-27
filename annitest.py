@@ -17,7 +17,7 @@ f = open('testinput.csv', 'w', newline='')
 fieldnames = response.json()['main']
 writer = csv.DictWriter(f, fieldnames=fieldnames)
 
-t = 10
+t = 10 # set x amount of seconds to wait
 writer.writeheader()
 
 for i in range(6):
@@ -26,3 +26,7 @@ for i in range(6):
 
     writer.writerow(row)
     time.sleep(t)
+
+f.close()
+
+print("EVERYTHING IS CLOSED")

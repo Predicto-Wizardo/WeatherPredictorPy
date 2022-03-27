@@ -22,10 +22,10 @@ writer.writeheader()
 myarr = []
 
 for i in range(6):
-    response = requests.get(openweather_url)
-    row = response.json()['main']
-    print(row['temp'])
-    myarr.append(row['temp'])
+    response = requests.get(openweather_url) # gets current weather data with a lot of extra info
+    row = response.json()['main'] # gets the main weather data
+    print(row['temp']) # gets just the current temperature
+    myarr.append(row['temp']) # adds current temp to an array
     writer.writerow(row)
     time.sleep(t)
 

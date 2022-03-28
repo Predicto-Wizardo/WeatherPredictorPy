@@ -14,7 +14,7 @@ import numpy as np
 # 2. Generate data with some variance along the curve at fairly regular intervals.
 # 3. Return data as a txt file
 
-"""Notes:
+"""TODO:
 - Use numpy data types for maximus precision
 """
 
@@ -31,7 +31,14 @@ def generate_smallsin(x):
     :param x:
     :return:
     """
-    return
+    # - 10.5 -> 29.5 for large cos
+    # 3 degrees variance for small sin
+    PERIOD_SCALAR = 2 * np.pi / 83
+    HORIZ_SHIFT = 14
+    RNG_AMPLITUDE = 3
+    new_x = PERIOD_SCALAR * x - HORIZ_SHIFT
+    y = AMPLITUDE * np.sin(new_x)
+    return y
 
 def add_variance(val):
     """
@@ -39,6 +46,7 @@ def add_variance(val):
     :param val:
     :return:
     """
+
     return
 
 def generate(num_days, spacing):
@@ -48,7 +56,6 @@ def generate(num_days, spacing):
     Basically each value is variance(bigcos(x) + smallsin(x))
     :return:
     """
-    return
 
 if __name__ == "__main__":
     DAYS_OF_DATA = 365

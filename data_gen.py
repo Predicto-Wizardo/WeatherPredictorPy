@@ -63,12 +63,16 @@ def generate(num_days, spacing):
     :return:
     """
     file = open("generated_data.txt", "w")
+    data_arr = []
     for day in range(0, num_days):
         # add function to convert spacing (in minutes) to a fraction of a day....
         data = generate_bigcos(day) + generate_smallsin(day)
+        data_arr.append(data)
         datastr = str(data)
         datastr += ("\n")
         file.write(datastr)
+
+    # plot data here
     file.close()
     return
 

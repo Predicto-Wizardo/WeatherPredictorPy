@@ -28,7 +28,7 @@ def generate_bigcos(x):
     VERTICAL_SHIFT = 9.5
     AMPLITUDE = 20
     new_x = PERIOD_SCALAR * x
-    y = AMPLITUDE * np.sin(new_x) + VERTICAL_SHIFT
+    y = AMPLITUDE * np.cos(new_x) + VERTICAL_SHIFT
     return y
 
 def generate_smallsin(x):

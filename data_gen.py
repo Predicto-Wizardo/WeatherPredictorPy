@@ -23,7 +23,13 @@ def generate_bigcos(x):
     Generates the large cosine wave, returns the value at point x
     :return:
     """
-    return
+    # temperature ranges from -10.5 to 29.5 degrees celcius
+    PERIOD_SCALAR = 2 * np.pi / 365
+    VERTICAL_SHIFT = 9.5
+    AMPLITUDE = 20
+    new_x = PERIOD_SCALAR * x
+    y = AMPLITUDE * np.sin(new_x) + 9.5
+    return y
 
 def generate_smallsin(x):
     """

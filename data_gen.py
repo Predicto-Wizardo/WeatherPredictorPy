@@ -63,9 +63,13 @@ def generate(num_days, spacing):
     :return:
     """
     file = open("generated_data.txt", "w")
-    for day in num_days:
+    for day in range(0, num_days):
+        # add function to convert spacing (in minutes) to a fraction of a day....
         data = generate_bigcos(day) + generate_smallsin(day)
-        file.write(data)
+        datastr = str(data)
+        datastr += ("\n")
+        file.write(datastr)
+    file.close()
     return
 
 if __name__ == "__main__":

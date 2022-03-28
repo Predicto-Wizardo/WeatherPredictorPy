@@ -35,7 +35,7 @@ def generate_smallsin(x):
     # 3 degrees variance for small sin
     PERIOD_SCALAR = 2 * np.pi / 83
     HORIZ_SHIFT = 14
-    RNG_AMPLITUDE = 3
+    AMPLITUDE = 3
     new_x = PERIOD_SCALAR * x - HORIZ_SHIFT
     y = AMPLITUDE * np.sin(new_x)
     return y
